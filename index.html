@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Slider HTML CSS JavaScript | codingNepal</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper CSS -->
+    <script src="https://kit.fontawesome.com/65c7daf4d1.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/slider-top.css" />
+    <link rel="stylesheet" href="css/headerNav.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    
+    <script src="js/slider-top.js" defer></script>
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/search.js" defer></script>
+  </head>
+  <body>
+
+<!-- Header -->
+
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">NetPrime</div>
+<!-- Nav -->
+          <nav class="nav">
+            <ul class="nav-ul">
+              <a class="nav__link active" href="#">Accueil</a>
+              <a class="nav__link" href="#film">Films</a>
+              <a class="nav__link" href="#serie">Séries</a>
+              <a class="nav__link" href="#contact">Contact</a>
+            </ul>
+          </nav>
+<!-- barre de recherche -->
+          <div class="search">
+            <input type="text" class="search__input" id="search__input" placeholder="Rechercher">
+            <button type="submit" class="search__button" id="search__button"><i class="fa-solid fa-search"></i></button>
+          </div>
+<!-- button hamburger -->
+          <button class="button-burger" aria-controls="primary-navigation" aria-expanded="false">
+            <svg class="hamburger" viewBox="0 0 100 100" width="35">
+                <rect class="line top" width="80" height="9" x="10" y="25" rx="5"></rect>
+                <rect class="line middle" width="80" height="9" x="10" y="50" rx="5"></rect>
+                <rect class="line bottom" width="80" height="9" x="10" y="75" rx="5"></rect>
+            </svg>
+        </button>
+        </div>
+      </div>
+    </header>
+    
+<!-- Carousel on top pure javascript -->
+
+<div id="banner">
+  <div class="image"></div>
+
+    <button class="button prev"><i class="fa-solid fa-arrow-left-long"></i></button>
+    <button class="button next"><i class="fa-solid fa-arrow-right-long"></i></button>
+
+  <div class="bullets"></div>
+</div>
+
+
+<main class="main">
+<!-- Recherche card -->
+
+  <div class="movie-container">
+    <div id="movie-results">
+      <div class="movie-card"></div>
+    </div>
+
+  </div>
+
+<!-- Modal search results2-->
+
+<button class="open-button">open modal</button>
+
+<dialog class="modal results2" id="modal" aria-describedby="alertdialog">
+  <div id="container-modal">
+     <i class="close-button fa-solid fa-xmark"></i>
+  </div>
+
+</dialog>
+
+<!-- Swiper -->
+
+
+
+    <div class="heading" id="film">
+      <h2 class="title">Films à découvrir</h2>
+    </div>
+
+<!-- Swiper Films -->
+
+    <section class="swiper mySwiper">
+      
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+<!-- Swiper serie -->
+
+    <div class="heading" id="serie">
+      <h2 class="title">Séries à découvrir</h2>
+    </div>
+
+    <section class="swiper mySwiper2">
+      
+      <div class="swiper-wrapper wrapper2">
+        <div class="swiper-slide swiper-slide2"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+</main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+    
+  </body>
+</html>

@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&family=Marvel:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@200;400;500;600;700;800;900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+/*========== Colors ==========*/
+
+--first-color: hsl(38, 92%, 58%);
+--first-color-light: hsl(38, 100%, 78%);
+--first-color-trans: rgba(206, 138, 21, 0.5);
+--first-color-alt: hsl(32, 75%, 50%);
+--second-color: hsl(195, 75%, 52%);
+--dark-color: hsl(212, 40%, 12%);
+--white-color: hsl(212, 4%, 95%);
+--body-color: hsl(212, 42%, 15%);
+--container-color: hsl(212, 42%, 20%);
+
+--gra: linear-gradient(90deg, var(--first-color) 0%, var(--second-color) 100%);
+
+/*========== Font and typography ==========*/
+
+--body-font: "Bai Jamjuree", sans-serif;
+--Marvel-font: 'Marvel', sans-serif;
+--Poppins-font: 'Poppins', sans-serif;
+
+--h2-font-size: 1.25rem;
+--normal-font-size: 1rem;
+}
+/*=============== BASE ===============*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: auto;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--white-color);
+  scroll-behavior: smooth;
+}
+/* main{
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: auto;
+  padding: 2rem;
+} */
+a {
+  text-decoration: none;
+}
+.main{
+  max-width: 95%;
+  width: 100%;
+  margin: auto;
+  padding: 4rem 0;
+}
+
+.heading {
+  padding-top: 90px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 70%;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, var(--first-color-alt) 0%, var(--second-color) 30%, rgba(18, 30, 43, 0.705) 100%);
+  border-image-slice: 1;
+
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--first-color-light);
+  font-family: var(--Marvel-font);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-block: 10px 0;
+  padding: 40px 0;
+}
+.swiper-wrapper{
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.card{
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.card-image{
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  transition: all 0.3s ease-in-out;
+}
+.swiper-slide img:hover{
+  transform: scale(1.1);
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+}
+
+.profile-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 7px;
+  background: var(--container-color);
+  border-radius: 0 0 1rem 1rem;
+}
+.profile-details .title{
+  text-align: center;
+  display: block;
+}
+.profile-details .title h3{
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--second-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 170px;
+}
+.profile-details .between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.profile-details .between .stars{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-details .between .stars i{
+  font-size: 15px;
+  color: #f1c40f;
+  margin-right: 5px;
+}
+.profile-details .between .stars .vote{
+  font-size: 15px;
+  background: var(--dark-color);
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+}
+.vote.red{
+  color: #FF3800;
+}
+.vote.orange{
+  color: #f39c12;
+}
+.vote.green{
+  color: #2ecc71;
+}
+.profile-details .between .year{
+  font-size: 15px;
+  color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  transform: scale(0.8);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  color: var(--first-color);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1);
+}
+.swiper-pagination-bullet {
+  background-color: var(--first-color);
+  transform: scale(0.9);
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--first-color);
+  transform: scale(1.3);
+}
